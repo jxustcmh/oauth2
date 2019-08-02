@@ -16,6 +16,12 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true, jsr250Enabled = true)
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
+    /**
+     *  访问资源的时候，会传令牌过来，里面有相应的权限信息  List<GrantedAuthority>
+     * @param http
+     * @throws Exception
+     */
+
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
