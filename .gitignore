@@ -1,2 +1,4 @@
 # Project exclude paths
 /oauth2-server/target/
+*.iml
+.idea

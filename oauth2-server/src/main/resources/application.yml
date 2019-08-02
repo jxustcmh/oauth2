@@ -17,3 +17,7 @@ spring:
       pool-name: DatebookHikariCP
 server:
   port: 8080
+
+mybatis:
+  type-aliases-package: com.hx.oauth2.entity
+  mapper-locations: mapper/*.xml
