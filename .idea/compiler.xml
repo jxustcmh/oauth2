@@ -7,14 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="oauth2-server" />
-        <module name="oauth2-dependencies" />
+        <module name="oauth2-resource" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="oauth2-dependencies" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="oauth2" options="-parameters" />
       <module name="oauth2-dependencies" options="-parameters" />
+      <module name="oauth2-resource" options="-parameters" />
       <module name="oauth2-server" options="-parameters" />
     </option>
   </component>
