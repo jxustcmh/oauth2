@@ -30,7 +30,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-    // 基于内存
+    // 基于内存的方式，设置clientId，secret，授权的类型，授权范围和回调地址
 /*    @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // 配置客户端

@@ -36,7 +36,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
+        // 用户的账户密码
         /*auth.inMemoryAuthentication()
                 // 在内存中创建用户并为密码加密
                 .withUser("user").password(passwordEncoder().encode("123456")).roles("USER")
@@ -46,7 +46,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         // 改成基于数据库
         auth.userDetailsService(userDetailsService());
     }
-
+    // 将 check_token 暴露出去，否则资源服务器访问时报 403 错误
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/oauth/check_token");
